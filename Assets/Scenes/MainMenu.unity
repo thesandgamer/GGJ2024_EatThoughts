@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,8 +574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2065773425}
-  sceneToUnload:
-    m_Handle: 0
+  playButton: {fileID: 1010602017}
+  sceneToUnload: {fileID: 102900000, guid: d8085c10b727fa64498a7bed699f1cc8, type: 3}
 --- !u!1 &2050679838
 GameObject:
   m_ObjectHideFlags: 0
