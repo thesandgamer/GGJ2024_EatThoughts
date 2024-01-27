@@ -15,6 +15,8 @@ public class S_TongueManager : MonoBehaviour
     [SerializeField] private GameObject tongue;
 
     private bool TongueIsMoving = false;
+    
+    public static event Action  Ev_TongueReturn;
 
     [Header("Speed")]
     [SerializeField]
@@ -71,12 +73,16 @@ public class S_TongueManager : MonoBehaviour
     public void TongueReturned()
     {
         TongueIsMoving = false;
+        Ev_TongueReturn?.Invoke();
+
     }
 
     public void HideTongue()
     {
         
     }
+
+ 
 }
 
 

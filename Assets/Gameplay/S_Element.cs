@@ -7,6 +7,24 @@ public class S_Element : MonoBehaviour
 {
     [SerializeField] private LayerMask layer;
 
+    [SerializeField] private AnimationCurve spawnCurve;
+
+
+    public float GainScore = 0;
+    
+    private void Awake()
+    {
+        this.gameObject.transform.localScale = Vector3.zero;
+        Appear();
+    }
+
+    private void Appear()
+    {
+        LeanTween.scale(this.gameObject, Vector3.one, 0.5f).setEase(LeanTweenType.easeOutBack);
+    }
+    
+    
+    //Quand touche la langue
     private void OnCollisionEnter(Collision other)
     {
         print("Collide1");
@@ -20,6 +38,11 @@ public class S_Element : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void BeingEat()
+    {
+        Destroy(gameObject);
     }
 
 
