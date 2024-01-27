@@ -11,8 +11,8 @@ public class S_SceneManager : MonoBehaviour
     
     private void Start()
     {
-        baseSceneToLoad.Add(SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive));
-        baseSceneToLoad.Add(SceneManager.LoadSceneAsync("SceneAsset", LoadSceneMode.Additive));
+        SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("SceneAsset", LoadSceneMode.Additive);
     }
 
     public void LoadScenes()
