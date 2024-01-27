@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class S_SceneManager : MonoBehaviour
 {
     private List<AsyncOperation> baseSceneToLoad = new List<AsyncOperation>();
+    
+    
     private void Start()
     {
         baseSceneToLoad.Add(SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive));
