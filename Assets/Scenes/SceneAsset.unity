@@ -691,6 +691,10 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.026246531
       objectReference: {fileID: 0}
+    - target: {fileID: -148247379363299655, guid: f9cbd38dae4637c49b2d4595709a63ee, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2959467708922500008, guid: fc99d0149d60c5a4b861049e7d1b736e, type: 3}
     - target: {fileID: 919132149155446097, guid: f9cbd38dae4637c49b2d4595709a63ee, type: 3}
       propertyPath: m_Name
       value: HeadAnimated03
