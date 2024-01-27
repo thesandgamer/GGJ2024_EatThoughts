@@ -23,16 +23,29 @@ public class S_ScoreManager : MonoBehaviour
     private void OnEnable()
     {
         S_Mounth.Ev_GainScore += ChangeScore;
+        S_BadThought.Ev_LooseScore += LooseScore;
     }
+
+ 
+
     private void OnDisable()
     {
         S_Mounth.Ev_GainScore -= ChangeScore;
+        S_BadThought.Ev_LooseScore -= LooseScore;
+
     }
 
     private void ChangeScore(float arg1, float arg2)
     {
         finalScore += arg1;
         UpdateUi();
+    }
+    
+    private void LooseScore(float obj)
+    {
+        finalScore += obj;
+        UpdateUi();
+
     }
 
     public void UpdateUi()

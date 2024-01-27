@@ -42,7 +42,19 @@ public class S_Element : MonoBehaviour
 
     public void BeingEat()
     {
+        Destroy();
+    }
+
+    public void Desapear()
+    {
+        LeanTween.scale(this.gameObject, Vector3.zero, 0.5f).setEase(LeanTweenType.punch).setOnComplete(Destroy);
+        //Play vfx/sfx
+    }
+
+    private void Destroy()
+    {
         Destroy(gameObject);
+
     }
 
 
