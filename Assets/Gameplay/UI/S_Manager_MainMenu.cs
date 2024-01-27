@@ -19,6 +19,8 @@ public class S_Manager_MainMenu : MonoBehaviour
 
     [SerializeField] 
     private SceneAsset sceneToUnload;
+    
+  
 
     public void RemoveUi()
     {
@@ -30,6 +32,7 @@ public class S_Manager_MainMenu : MonoBehaviour
     {
         //SceneManager.UnloadSceneAsync( SceneManager.GetSceneByName("MainMenu"));
         SceneManager.UnloadSceneAsync( sceneToUnload.name);
+        SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
         OnEvMainMenuDisapear();
     }
 
