@@ -20,11 +20,18 @@ public class S_Arm : MonoBehaviour
     
     [Header("Speed")]
     [SerializeField]
-    private float armSpeed = 2;
+    private float armSpeed = 1;
 
     private float elapsedTime;
-    
-    
+
+    private float maxArmLength;
+
+    private void Awake()
+    {
+        maxArmLength = targetArm.transform.position.y;
+    }
+
+
     private void Update()
     {
         if (Input.GetMouseButton(1))
@@ -40,14 +47,27 @@ public class S_Arm : MonoBehaviour
             if (plane.Raycast(ray, out float distance))
             {
                 LocTargetWorld = ray.GetPoint(distance);
-            }               
-    
-            targetArm.GetComponent<Rigidbody>().MovePosition(LocTargetWorld);
+            }
+
+            
+            
+            arm.transform.position = S_Utility.VinterpTo(arm.transform.position,  new Vector3(LocTargetWorld.x,arm.transform.position.y,LocTargetWorld.z),Time.deltaTime ,armSpeed);
+           // targetArm.GetComponent<Rigidbody>().MovePosition(LocTargetWorld);
     
            // Vector3 vel = new Vector3(armSpeed, armSpeed, armSpeed);
            // targetArm.transform.position = Vector3.SmoothDamp(targetArm.transform.position, LocTargetWorld, ref vel, 2);
            //targetArm.transform.position = LocTargetWorld;
-           arm.transform.position = new Vector3(LocTargetWorld.x,arm.transform.position.y,LocTargetWorld.z);
+           Vector3 targetArmPos;
+           if (LocTargetWorld.y < maxArmLength)
+           {
+               targetArmPos = new Vector3(LocTargetWorld.x, LocTargetWorld.y, LocTargetWorld.z);
+           }
+           else
+           {
+               targetArmPos = new Vector3(LocTargetWorld.x, targetArm.transform.position.y, LocTargetWorld.z);
+
+           }
+           targetArm.transform.position = targetArmPos;
 
         }
 
