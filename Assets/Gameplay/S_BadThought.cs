@@ -7,6 +7,7 @@ public class S_BadThought : MonoBehaviour
 {
     public static event Action<float> Ev_LooseScore;
 
+
     [SerializeField] private float timeToAbsorb = 5;
     private void Start()
     {
