@@ -36,9 +36,15 @@ public class S_Element : MonoBehaviour
         if (other.gameObject.layer == 7)
         {
             print("Collide");
+            transform.parent = other.transform;
+            
+        }
+        else
+        {
             foreach (ContactPoint contact in other.contacts)
             {
-                transform.parent = other.transform;
+                GetComponent<Rigidbody>().AddForce(contact.normal * 10);
+                print("Punch");
                 break;
             }
         }
