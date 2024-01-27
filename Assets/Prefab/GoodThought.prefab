@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.62
       objectReference: {fileID: 0}
+    - target: {fileID: 7508132661727765887, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5861856293418401646, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
     m_RemovedGameObjects: []

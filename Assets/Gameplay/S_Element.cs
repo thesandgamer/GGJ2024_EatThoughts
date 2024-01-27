@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class S_Element : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class S_Element : MonoBehaviour
     {
         this.gameObject.transform.localScale = Vector3.zero;
         Appear();
+
+        Vector3 randomForce = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        GetComponent<Rigidbody>().AddForce(randomForce);
     }
 
     private void Appear()
@@ -40,6 +44,11 @@ public class S_Element : MonoBehaviour
         }
     }
 
+    public void DestroyWhenOutOfScreen()
+    {
+        Destroy();
+    }
+    
     public void BeingEat()
     {
         Destroy();

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 [Serializable]
 public struct Spawn
@@ -25,6 +27,8 @@ public class S_ElementSpawner : MonoBehaviour
 
     private int currentWave = 0;
     private int currentSpawn = 0;
+
+    [SerializeField] private float Range = 2;
 
     private void Start()
     {
@@ -50,7 +54,9 @@ public class S_ElementSpawner : MonoBehaviour
     public void SpawnElement()
     {
         Spawn element = waves[currentWave].spawns[currentSpawn];
-        Instantiate(element.objectToSpawn, spawnPositions[0].position,spawnPositions[0].rotation);
+        Vector3 spawnPos = spawnPositions[0].position;
+        spawnPos += new Vector3(Random.Range(-Range,Range),Random.Range(-Range,Range),0);
+        Instantiate(element.objectToSpawn, spawnPos,spawnPositions[0].rotation);
         currentSpawn++;
         if (currentSpawn < waves[currentWave].spawns.Count) //Si on à pas ateins la fin des elements à spawn
         {
