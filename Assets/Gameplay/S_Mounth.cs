@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class S_Mounth : MonoBehaviour
 {
-  private List<float> tempScore;
+  private List<float> tempScore = new List<float>();
 
   public static event Action<float,float> Ev_GainScore;
 
@@ -51,10 +51,14 @@ public class S_Mounth : MonoBehaviour
     }
     OnEvGainScore(score,tempScore.Count);
     tempScore.Clear();
+    print("Calculate score ");
+
   }
 
   private static void OnEvGainScore(float score, float multiplier )
   {
     Ev_GainScore?.Invoke(score,multiplier);
   }
+  
+  
 }
