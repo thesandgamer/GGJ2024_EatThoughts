@@ -43,6 +43,8 @@ public class S_Element : MonoBehaviour
         {
             foreach (ContactPoint contact in other.contacts)
             {
+                //ToDo: donner une force quand on touche avec la main ou entre eux
+                //other.gameObject.GetComponent<Rigidbody>().velocity
                 GetComponent<Rigidbody>().AddForce(contact.normal * 10);
                 print("Punch");
                 break;
