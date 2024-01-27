@@ -30,6 +30,23 @@ public class S_TongueManager : MonoBehaviour
         StartPoint = transform.position;
     }
 
+
+
+    public Vector3 GetPosInWorld()
+    {
+        ScreenLocTarget = Input.mousePosition;
+
+        Ray ray = Camera.main.ScreenPointToRay(ScreenLocTarget);
+
+        if (plane.Raycast(ray, out float distance))
+        {
+            return  ray.GetPoint(distance);
+        }
+
+        return Vector3.zero;
+
+    }
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -37,7 +54,9 @@ public class S_TongueManager : MonoBehaviour
             if (!TongueIsMoving)
             {
                 TongueIsMoving = true;
-                
+
+                LocTargetWorld = GetPosInWorld();
+                /*
                 ScreenLocTarget = Input.mousePosition;
 
                 Ray ray = Camera.main.ScreenPointToRay(ScreenLocTarget);
@@ -45,7 +64,7 @@ public class S_TongueManager : MonoBehaviour
                 if (plane.Raycast(ray, out float distance))
                 {
                     LocTargetWorld = ray.GetPoint(distance);
-                }
+                }*/
 
                 MoveTongueToTarget();
             }

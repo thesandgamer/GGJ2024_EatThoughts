@@ -15,6 +15,11 @@ public class S_SceneManager : MonoBehaviour
         SceneManager.LoadSceneAsync("SceneAsset", LoadSceneMode.Additive);
     }
 
+    public void LoadGameScene()
+    {
+        SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
+    }
+
     public void LoadScenes()
     {
         
