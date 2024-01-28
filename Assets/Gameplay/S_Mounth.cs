@@ -63,9 +63,16 @@ public class S_Mounth : MonoBehaviour
     {
       score += val;
     }
-    Reaction(score > 0);
-    
 
+    if (score != 0)
+    {
+      Reaction(score > 0);
+    }
+    else
+    {
+      bodyManager.animator.SetTrigger("FinishChew");
+    }
+    
     OnEvGainScore(score,tempScore.Count);
     tempScore.Clear();
     print("Calculate score ");
