@@ -1911,19 +1911,19 @@ MonoBehaviour:
   waves:
   - spawns:
     - objectToSpawn: {fileID: 7677609977016778299, guid: 91e76234b07c0b34c8381082e2399882, type: 3}
-      timeToSpawnNext: 2
+      timeToSpawnNext: 5
     - objectToSpawn: {fileID: 7677609977016778299, guid: bc63ce997251bb64b9bf03139394df54, type: 3}
-      timeToSpawnNext: 3
-    delayBetweenWaves: 3
+      timeToSpawnNext: 6
+    delayBetweenWaves: 15
   - spawns:
     - objectToSpawn: {fileID: 7677609977016778299, guid: e2df7c04b2707e94597043a78adb199e, type: 3}
       timeToSpawnNext: 1
     - objectToSpawn: {fileID: 7677609977016778299, guid: bc63ce997251bb64b9bf03139394df54, type: 3}
-      timeToSpawnNext: 5
+      timeToSpawnNext: 10
     - objectToSpawn: {fileID: 7677609977016778299, guid: bc63ce997251bb64b9bf03139394df54, type: 3}
       timeToSpawnNext: 2
-    delayBetweenWaves: 0
-  Range: 0.1
+    delayBetweenWaves: 10
+  Range: 1
 --- !u!1001 &1563487476
 PrefabInstance:
   m_ObjectHideFlags: 0
