@@ -75,6 +75,9 @@ public class S_ElementSpawner : MonoBehaviour
             else
             {
                 print("At end of spawner");
+                currentSpawn = 0;
+                currentWave = waves.Count - 1;
+                Invoke("SpawnWave",waves[currentWave].delayBetweenWaves);
             }
          
         }
