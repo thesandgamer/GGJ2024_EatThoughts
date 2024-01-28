@@ -26,7 +26,7 @@ public class S_Element : MonoBehaviour
 
         if (sprites.Count > 0 )
         {
-            spriteRender.sprite = sprites[Random.Range(0, sprites.Count)];
+            spriteRender.sprite = sprites[(int)Random.Range((int)0, sprites.Count)];
         }
 
 

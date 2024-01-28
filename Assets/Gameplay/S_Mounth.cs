@@ -13,6 +13,8 @@ public class S_Mounth : MonoBehaviour
 
   private S_BodyManager bodyManager;
 
+  [SerializeField] private GameObject tongue;
+
   private void Start()
   {
     bodyManager = FindObjectOfType<S_BodyManager>();
@@ -52,7 +54,7 @@ public class S_Mounth : MonoBehaviour
 
   void CalculateScore()
   {
-    foreach (Transform child in transform.GetComponentInChildren<Transform>())
+    foreach (Transform child in tongue.transform.GetComponentInChildren<Transform>(true))
     {
       if (child.gameObject.GetComponent<S_Element>())
       {

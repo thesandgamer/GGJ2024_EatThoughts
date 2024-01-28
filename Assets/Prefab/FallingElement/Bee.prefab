@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015949336317372568, guid: bc4e4489cb287d5478c12f6bfd63c9dd, type: 3}
       propertyPath: GainScore
-      value: -10
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 1015949336317372568, guid: bc4e4489cb287d5478c12f6bfd63c9dd, type: 3}
       propertyPath: SoundName

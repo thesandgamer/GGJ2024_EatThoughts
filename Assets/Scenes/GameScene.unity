@@ -2093,6 +2093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanEat: 0
+  tongue: {fileID: 2045089534}
 --- !u!4 &1259726664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7683770821459044734, guid: ee5c999b614fb544b8d60dc7cd294a3e, type: 3}
@@ -2418,7 +2419,7 @@ MonoBehaviour:
       timeToSpawnNext: 3
     - objectToSpawn: {fileID: 8231411467184074598, guid: b8a0ec730082a9d47b6992ce09f4245a, type: 3}
       timeToSpawnNext: 0.2
-    - objectToSpawn: {fileID: 8350265688745982640, guid: fe4d2c97791c4e34797c0058053b3253, type: 3}
+    - objectToSpawn: {fileID: 4876694355237396684, guid: 519c73ad279aedc44b6ff52702351d93, type: 3}
       timeToSpawnNext: 0.1
     - objectToSpawn: {fileID: 8350265688745982640, guid: fe4d2c97791c4e34797c0058053b3253, type: 3}
       timeToSpawnNext: 0.1
@@ -2434,9 +2435,9 @@ MonoBehaviour:
       timeToSpawnNext: 2
     - objectToSpawn: {fileID: 7677609977016778299, guid: e2df7c04b2707e94597043a78adb199e, type: 3}
       timeToSpawnNext: 1
-    - objectToSpawn: {fileID: 7677609977016778299, guid: e2df7c04b2707e94597043a78adb199e, type: 3}
+    - objectToSpawn: {fileID: 4876694355237396684, guid: 519c73ad279aedc44b6ff52702351d93, type: 3}
       timeToSpawnNext: 2
-    - objectToSpawn: {fileID: 7677609977016778299, guid: e2df7c04b2707e94597043a78adb199e, type: 3}
+    - objectToSpawn: {fileID: 4876694355237396684, guid: 519c73ad279aedc44b6ff52702351d93, type: 3}
       timeToSpawnNext: 6
     delayBetweenWaves: 3
   - spawns:
@@ -2711,11 +2712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 376050955325150294, guid: 9e4f4e41f9c580b47aa8855aee7121ee, type: 3}
       propertyPath: startTime.min
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 376050955325150294, guid: 9e4f4e41f9c580b47aa8855aee7121ee, type: 3}
       propertyPath: startTime.seg
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 748367735213238299, guid: 9e4f4e41f9c580b47aa8855aee7121ee, type: 3}
       propertyPath: m_Pivot.x

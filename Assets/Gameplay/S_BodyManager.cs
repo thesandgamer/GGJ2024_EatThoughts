@@ -10,7 +10,6 @@ public class S_BodyManager : MonoBehaviour
 
     private S_TongueManager tongue;
 
-    [SerializeField] private Animation anim;
     [SerializeField] public Animator animator;
 
     private Plane plane = new Plane(Vector3.forward, 9);
@@ -51,5 +50,15 @@ public class S_BodyManager : MonoBehaviour
         
         //Quaternion.Euler()
         
+    }
+
+    public void MakeSadFace()
+    {
+        animator.SetTrigger("SadFace");
+    }
+    
+    public void MakeHappyFace()
+    {
+        animator.SetTrigger("HappyFace");
     }
 }
