@@ -17,21 +17,7 @@ public class Scr_FeedbacksManager : MonoBehaviour
     }
 
 
-    public void ToadDefetead(GameObject toad,bool projectionLeft)
-    {
-        //On étire la grenouille
-        int direction = 0;
-        if (projectionLeft) direction = 180;
-
-        tweener.Stretch(toad,new Vector3(1.2f,0.8f,0.8f),0.5f,0.1f);
-        
-        //Fait spawn FX: traits de vitesse
-
-        //Joue Son
-        
-        //Joue animation
-
-    }
+    
 
 
 

@@ -12,8 +12,14 @@ public class S_BadThought : MonoBehaviour
     private void Start()
     {
         Invoke("Absorb", timeToAbsorb);
+        Invoke("Feedback", timeToAbsorb - timeToAbsorb/3);
     }
 
+    private void Feedback()
+    {
+        FindObjectOfType<Scr_Tweener_Feedbacks>().UiSizeUpAndDown(gameObject,new Vector3(1.2f,1.2f,1.2f),0.2f, LeanTweenType.easeInOutBack);
+    }
+    
     private void Absorb()
     {
         if (GetComponent<S_Element>())
