@@ -88,21 +88,33 @@ public class S_Mounth : MonoBehaviour
 
   private void Reaction(bool isGood)
   {
+    FindObjectOfType<Scr_AudioManager>().Play("Chew");
+
     if (isGood)
     {
       bodyManager.animator.SetTrigger("GoodReaction");
-      FindObjectOfType<Scr_AudioManager>().Play("GoodChew");
       Invoke("RestetTongue",2.6f);
+      Invoke("playGoodSound",1.5f);
 
     }
     else
     {
       bodyManager.animator.SetTrigger("BadReaction");
-      FindObjectOfType<Scr_AudioManager>().Play("BadChew");
       Invoke("RestetTongue",2.6f);
+      Invoke("playeBadSound",2.6f);
     }
   }
 
+  void playGoodSound()
+  {
+    FindObjectOfType<Scr_AudioManager>().Play("GoodChew");
+
+  }
+
+  private void playeBadSound()
+  {
+    FindObjectOfType<Scr_AudioManager>().Play("BadChew");
+  }
   private static void OnEvGainScore(float score, float multiplier )
   {
     Ev_GainScore?.Invoke(score,multiplier);

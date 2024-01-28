@@ -227,7 +227,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -256,7 +256,7 @@ PrefabInstance:
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d75cb8e19f6901b48aa19fd58d2703e0, type: 3}
+      objectReference: {fileID: 8300000, guid: ad13ae4ea4e34b74b91c5fceaacbd3d3, type: 3}
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[2].loop
       value: 0
@@ -296,10 +296,10 @@ PrefabInstance:
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[6].clip
       value: 
-      objectReference: {fileID: 8300000, guid: cadfe4c2b53c29540a4a7891151cbfc9, type: 3}
+      objectReference: {fileID: 8300000, guid: d75cb8e19f6901b48aa19fd58d2703e0, type: 3}
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[6].name
-      value: FryEat
+      value: Chew
       objectReference: {fileID: 0}
     - target: {fileID: 5962919047404374332, guid: 27eea1b6b794f654d862632088d2cde0, type: 3}
       propertyPath: sounds.Array.data[4].pitch

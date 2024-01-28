@@ -100,6 +100,8 @@ public class S_TongueManager : MonoBehaviour
     {
         HideTongue();
         Ev_TongueReturn?.Invoke();
+        FindObjectOfType<S_Mounth>().CanEat = false;
+
        // Invoke("Retun",2.6f);
 
     }

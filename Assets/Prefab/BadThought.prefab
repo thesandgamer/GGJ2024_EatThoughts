@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: GainScore
-      value: -3
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: spriteRender
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d18a9af5a5eb548b62ffd15608f4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToAbsorb: 20
+  timeToAbsorb: 10
 --- !u!114 &6327175056016156242
 MonoBehaviour:
   m_ObjectHideFlags: 0

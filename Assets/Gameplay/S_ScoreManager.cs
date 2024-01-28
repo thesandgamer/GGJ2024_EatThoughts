@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -11,6 +12,7 @@ public class S_ScoreManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Slider slider;
     [SerializeField] private Image healthBar;
     [SerializeField] private RectTransform bar;
+    [SerializeField] private TMP_Text text;
 
     private float finalScore = 0;
 
@@ -64,6 +66,7 @@ public class S_ScoreManager : MonoBehaviour
             scoring.FinalScore = finalScore;
         }
         slider.value = finalScore;
+        text.text = finalScore.ToString();
         LeanTween.size(bar, bar.sizeDelta+ new Vector2(10f,10f) , .5f).setEase(LeanTweenType.easeShake);
         // healthBar.fillAmount = Mathf.Clamp(finalScore, MinHapiness, MaxHapiness);
     }

@@ -32,11 +32,25 @@ public class S_SceneManager : MonoBehaviour
     void FinishGame()
     {
         SceneManager.UnloadSceneAsync("GameScene");
+        if (FindObjectOfType<S_Scoring>().FinalScore > 0)
+        {
+            LoadGoodEnding();
+
+        }
+        else
+        {
+            LoadBadEnding();
+        }
 
     }
 
-    public void LoadScenes()
+    void LoadBadEnding()
     {
-        
+        SceneManager.LoadSceneAsync("End_Bad", LoadSceneMode.Additive);
+
+    }
+    void LoadGoodEnding()
+    {
+        SceneManager.LoadSceneAsync("End_Good", LoadSceneMode.Additive);
     }
 }
