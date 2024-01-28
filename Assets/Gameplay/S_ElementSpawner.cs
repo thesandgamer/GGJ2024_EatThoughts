@@ -54,7 +54,7 @@ public class S_ElementSpawner : MonoBehaviour
     public void SpawnElement()
     {
         Spawn element = waves[currentWave].spawns[currentSpawn];
-        Vector3 spawnPos = spawnPositions[0].position;
+        Vector3 spawnPos = spawnPositions[Random.Range(0,spawnPositions.Count)].position;
         spawnPos += new Vector3(Random.Range(-Range,Range),Random.Range(-Range,Range),0);
         Instantiate(element.objectToSpawn, spawnPos,spawnPositions[0].rotation);
         currentSpawn++;

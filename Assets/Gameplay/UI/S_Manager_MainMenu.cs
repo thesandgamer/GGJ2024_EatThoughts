@@ -17,8 +17,6 @@ public class S_Manager_MainMenu : MonoBehaviour
 
     public static event Action Ev_MainMenuDisapear ;
 
-    [SerializeField] 
-    private SceneAsset sceneToUnload;
     
   
 
@@ -31,7 +29,7 @@ public class S_Manager_MainMenu : MonoBehaviour
     public void RemoveMainMenu()
     {
         //SceneManager.UnloadSceneAsync( SceneManager.GetSceneByName("MainMenu"));
-        SceneManager.UnloadSceneAsync( sceneToUnload.name);
+        SceneManager.UnloadSceneAsync( "MainMenu");
         SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
         OnEvMainMenuDisapear();
     }
