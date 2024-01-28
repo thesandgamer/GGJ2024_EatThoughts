@@ -63,7 +63,9 @@ public class S_Element : MonoBehaviour
     
     public void BeingEat()
     {
-        Destroy();
+        //Destroy();
+        LeanTween.scale(this.gameObject, new Vector3(transform.localScale.x + 0.01f,transform.localScale.y +0.01f,transform.localScale.z +0.01f), 1f).setEase(LeanTweenType.punch).setOnComplete(Destroy);
+
     }
 
     public void Desapear()
@@ -71,6 +73,7 @@ public class S_Element : MonoBehaviour
         LeanTween.scale(this.gameObject, Vector3.zero, 0.5f).setEase(LeanTweenType.punch).setOnComplete(Destroy);
         //Play vfx/sfx
     }
+    
 
     private void Destroy()
     {

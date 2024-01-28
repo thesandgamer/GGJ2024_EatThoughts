@@ -1223,6 +1223,10 @@ PrefabInstance:
       value: GoodThought
       objectReference: {fileID: 0}
     - target: {fileID: 6616652451187883228, guid: 519c73ad279aedc44b6ff52702351d93, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616652451187883228, guid: 519c73ad279aedc44b6ff52702351d93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.537
       objectReference: {fileID: 0}
