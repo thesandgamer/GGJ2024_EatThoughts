@@ -9,6 +9,8 @@ public class S_Mounth : MonoBehaviour
 
   public static event Action<float,float> Ev_GainScore;
 
+  public bool CanEat = false;
+  
   private void OnEnable()
   {
     S_TongueManager.Ev_TongueReturn += CalculateScore;
@@ -20,13 +22,16 @@ public class S_Mounth : MonoBehaviour
 
   private void OnTriggerEnter(Collider other)
   {
-
-    if (other.gameObject.layer == 8)
+    if (CanEat)
     {
-      print("Dest");
+      if (other.gameObject.layer == 8)
+      {
+        print("Dest");
 
-      EatElement(other.gameObject);
+        EatElement(other.gameObject);
+      }
     }
+
   }
 
   private void OnCollisionEnter(Collision other)

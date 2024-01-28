@@ -31,12 +31,16 @@ public class S_Element : MonoBehaviour
     //Quand touche la langue
     private void OnCollisionEnter(Collision other)
     {
-        print("Collide1");
 
         if (other.gameObject.layer == 7)
         {
+            /*
             print("Collide");
-            transform.parent = other.transform;
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<BoxCollider>().isTrigger = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+            transform.parent = other.transform;*/
             
         }
         else

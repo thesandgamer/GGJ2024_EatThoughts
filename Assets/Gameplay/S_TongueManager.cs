@@ -75,12 +75,15 @@ public class S_TongueManager : MonoBehaviour
     public void MoveTongueToTarget()
     {
         LeanTween.move(tongue, LocTargetWorld, tongueSpeed).setOnComplete(TongueReachTarget);
+        FindObjectOfType<S_Mounth>().CanEat = false;
+
 
     }
 
     public void ReturnTongue()
     {
         LeanTween.move(tongue,StartPoint , tongueReturnSpeed).setOnComplete(TongueReturned);
+        FindObjectOfType<S_Mounth>().CanEat = true;
     }
     
 

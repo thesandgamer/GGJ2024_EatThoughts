@@ -58,6 +58,8 @@ public class S_Arm : MonoBehaviour
            // targetArm.transform.position = Vector3.SmoothDamp(targetArm.transform.position, LocTargetWorld, ref vel, 2);
            //targetArm.transform.position = LocTargetWorld;
            Vector3 targetArmPos;
+           targetArmPos = new Vector3(LocTargetWorld.x, LocTargetWorld.y, LocTargetWorld.z);
+             /*
            if (LocTargetWorld.y < maxArmLength)
            {
                targetArmPos = new Vector3(LocTargetWorld.x, LocTargetWorld.y, LocTargetWorld.z);
@@ -66,8 +68,10 @@ public class S_Arm : MonoBehaviour
            {
                targetArmPos = new Vector3(LocTargetWorld.x, targetArm.transform.position.y, LocTargetWorld.z);
 
-           }
-           targetArm.transform.position = targetArmPos;
+           }*/
+           targetArm.transform.position =  S_Utility.VinterpTo(targetArm.transform.position,  targetArmPos,Time.deltaTime ,armSpeed);
+           
+          
 
         }
 
