@@ -6,9 +6,10 @@ using Random = UnityEngine.Random;
 
 public class S_Element : MonoBehaviour
 {
-    [SerializeField] private LayerMask layer;
 
-    [SerializeField] private AnimationCurve spawnCurve;
+
+    [SerializeField] private SpriteRenderer spriteRender;
+    [SerializeField] private List<Sprite> sprites;
 
 
     public float GainScore = 0;
@@ -20,6 +21,13 @@ public class S_Element : MonoBehaviour
 
         Vector3 randomForce = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         GetComponent<Rigidbody>().AddForce(randomForce);
+
+        if (sprites.Count > 0 )
+        {
+            spriteRender.sprite = sprites[Random.Range(0, sprites.Count)];
+        }
+
+
     }
 
     private void Appear()
@@ -64,6 +72,7 @@ public class S_Element : MonoBehaviour
     public void BeingEat()
     {
         //Destroy();
+        transform.parent = null;
         LeanTween.scale(this.gameObject, new Vector3(transform.localScale.x + 0.01f,transform.localScale.y +0.01f,transform.localScale.z +0.01f), 1f).setEase(LeanTweenType.punch).setOnComplete(Destroy);
 
     }

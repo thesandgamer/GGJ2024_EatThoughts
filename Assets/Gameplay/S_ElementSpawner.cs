@@ -30,9 +30,11 @@ public class S_ElementSpawner : MonoBehaviour
 
     [SerializeField] private float Range = 2;
 
+    [SerializeField] private float StartTime = 5;
+
     private void Start()
     {
-        SpawnElement();
+        Invoke("SpawnElement",StartTime);
         //Instantiate(waves[currentWave].spawns[currentSpawn].objectToSpawn, spawnPositions[0].position,spawnPositions[0].rotation);
 
     }

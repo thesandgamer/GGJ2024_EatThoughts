@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 283910019}
   - component: {fileID: 283910021}
   - component: {fileID: 283910020}
+  - component: {fileID: 283910022}
   m_Layer: 0
   m_Name: polySurface10 (4)
   m_TagString: Untagged
@@ -289,6 +290,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283910018}
   m_Mesh: {fileID: -856059019632272089, guid: 24f01b6ac04a8b344b9e2c7d8386b616, type: 3}
+--- !u!65 &283910022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283910018}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.38278332, y: 0.33821467, z: 0.006283553}
+  m_Center: {x: 0, y: 0.03882146, z: 0.14674945}
 --- !u!4 &338307974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5261f2f834d9014f85d4d0e8bf7175f, type: 3}

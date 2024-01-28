@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: GainScore
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: spriteRender
+      value: 
+      objectReference: {fileID: 1923362116943774861}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 335a17879aee9b54e8f213965b509004, type: 3}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: ef21c842c61be194795c70b70124cc59, type: 3}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 25ea717f3a73bb045ad2bcb704f07a1f, type: 3}
     - target: {fileID: 859958523499348750, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_Name
       value: GoodThought
@@ -56,6 +76,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3796894908243400260, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_Size.x
       value: 1.14
@@ -64,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.62
       objectReference: {fileID: 0}
+    - target: {fileID: 5977252739024742223, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 335a17879aee9b54e8f213965b509004, type: 3}
     - target: {fileID: 7508132661727765887, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -77,6 +113,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 770717236662252568}
   m_SourcePrefab: {fileID: 100100000, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+--- !u!212 &1923362116943774861 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5977252739024742223, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+  m_PrefabInstance: {fileID: 5206812171000636354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4876694355237396684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 859958523499348750, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}

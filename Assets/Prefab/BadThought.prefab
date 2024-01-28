@@ -13,6 +13,26 @@ PrefabInstance:
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: spriteRender
+      value: 
+      objectReference: {fileID: 3097986629414248177}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d38701859cdb6c94b80631d3ad78692b, type: 3}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4cabb6daa59aab488f5aefbce22be9f, type: 3}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f131ed2a365c44695fff5d22727e8a, type: 3}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: spawnCurve.m_Curve.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -174,19 +194,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045269642864097809, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_fontColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2045269642864097809, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_fontColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2045269642864097809, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_fontColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2045269642864097809, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483223266396604577, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3742061319674386309, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_LocalPosition.z
@@ -207,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 5977252739024742223, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6ae4a8a8362fa5049aa3a3e2d4390415, type: 3}
+      objectReference: {fileID: 21300000, guid: d38701859cdb6c94b80631d3ad78692b, type: 3}
     m_RemovedComponents:
     - {fileID: 5861856293418401646, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
     - {fileID: 3671283500693295451, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
@@ -221,6 +253,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6327175056016156242}
   m_SourcePrefab: {fileID: 100100000, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+--- !u!212 &3097986629414248177 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5977252739024742223, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+  m_PrefabInstance: {fileID: 8650629688851020222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7237130914699166639 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2045269642864097809, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
