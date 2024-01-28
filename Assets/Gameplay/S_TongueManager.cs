@@ -19,7 +19,8 @@ public class S_TongueManager : MonoBehaviour
     private bool TongueIsMoving = false;
 
     private bool TongueIsOut = false;
-    
+
+    [SerializeField] private S_BodyManager bodyManager;
     public static event Action  Ev_TongueReturn;
 
     [Header("Speed")]
@@ -32,11 +33,15 @@ public class S_TongueManager : MonoBehaviour
     {
         tongueTarget.transform.position = transform.position;
         StartPoint = transform.position;
-        
+
         HideTongue();
     }
 
-    
+    private void Start()
+    {
+        bodyManager = FindObjectOfType<S_BodyManager>();
+
+    }
 
 
     public Vector3 GetPosInWorld()
@@ -108,6 +113,7 @@ public class S_TongueManager : MonoBehaviour
     public void ShowTongue()
     {
         tongue.SetActive(true);
+        bodyManager.animator.SetTrigger("TongueOut");
     }
 
  

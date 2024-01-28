@@ -10,7 +10,15 @@ public class S_Mounth : MonoBehaviour
   public static event Action<float,float> Ev_GainScore;
 
   public bool CanEat = false;
-  
+
+  private S_BodyManager bodyManager;
+
+  private void Start()
+  {
+    bodyManager = FindObjectOfType<S_BodyManager>();
+
+  }
+
   private void OnEnable()
   {
     S_TongueManager.Ev_TongueReturn += CalculateScore;
@@ -49,15 +57,32 @@ public class S_Mounth : MonoBehaviour
 
   void CalculateScore()
   {
+    bodyManager.animator.SetTrigger("Chew");
     float score = 0;
     foreach (var val in tempScore)
     {
       score += val;
     }
+    Reaction(score > 0);
+    
+
     OnEvGainScore(score,tempScore.Count);
     tempScore.Clear();
     print("Calculate score ");
 
+  }
+
+  private void Reaction(bool isGood)
+  {
+    if (isGood)
+    {
+      bodyManager.animator.SetTrigger("GoodReaction");
+
+    }
+    else
+    {
+      bodyManager.animator.SetTrigger("BadReaction");
+    }
   }
 
   private static void OnEvGainScore(float score, float multiplier )

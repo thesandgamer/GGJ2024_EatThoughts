@@ -11,7 +11,7 @@ public class S_BodyManager : MonoBehaviour
     private S_TongueManager tongue;
 
     [SerializeField] private Animation anim;
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator animator;
 
     private Plane plane = new Plane(Vector3.forward, 1);
     private void Awake()
