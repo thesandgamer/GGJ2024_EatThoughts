@@ -111,7 +111,16 @@ public class Scr_TimerManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(totalTime / 60);
         int secondes = Mathf.FloorToInt(totalTime % 60);
-        minText.text = minutes.ToString("00");
+        if (minText)
+        {
+            minutes = Mathf.FloorToInt(totalTime / 60);
+            secondes = Mathf.FloorToInt(totalTime % 60);
+            minText.text = minutes.ToString("00");
+        }
+        else
+        {
+            secondes = (int)totalTime;
+        }
         secText.text = secondes.ToString("00");
        // secText.text = string.Format("{0:00}:{1:00}",minutes, secondes);
         

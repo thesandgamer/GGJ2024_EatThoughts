@@ -42,11 +42,6 @@ public class S_Mounth : MonoBehaviour
 
   }
 
-  private void OnCollisionEnter(Collision other)
-  {
-    print("Dest");
-  }
-
   void EatElement(GameObject other)
   {
     tempScore.Add(other.GetComponent<S_Element>().GainScore);
@@ -57,6 +52,15 @@ public class S_Mounth : MonoBehaviour
 
   void CalculateScore()
   {
+    foreach (Transform child in transform.GetComponentInChildren<Transform>())
+    {
+      if (child.gameObject.GetComponent<S_Element>())
+      {
+        tempScore.Add(child.GetComponent<S_Element>().GainScore);
+        child.gameObject.GetComponent<S_Element>().BeingEat();
+      }
+    }
+    
     bodyManager.animator.SetTrigger("Chew");
     float score = 0;
     foreach (var val in tempScore)

@@ -16,11 +16,15 @@ public class S_TongueCollide : MonoBehaviour
       {
          print("Stick On ");
          other.GetComponent<Rigidbody>().useGravity = false;
-         other.GetComponent<BoxCollider>().isTrigger = true;
+        // other.GetComponent<BoxCollider>().isTrigger = true;
+         //other.GetComponent<BoxCollider>().enabled = false;
          other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
          
          other.transform.parent = transform;
-            
+
+       //  other.GetComponent<S_Element>().enabled = false;
+
       }
    }
 }

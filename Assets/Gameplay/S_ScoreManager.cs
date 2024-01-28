@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class S_ScoreManager : MonoBehaviour
 {
 
     [SerializeField] private UnityEngine.UI.Slider slider;
+    [SerializeField] private Image healthBar;
 
     private float finalScore = 0;
 
@@ -18,6 +20,8 @@ public class S_ScoreManager : MonoBehaviour
     {
         slider.maxValue = MaxHapiness;
         slider.minValue = MinHapiness;
+        
+        UpdateUi();
     }
 
     private void OnEnable()
@@ -51,5 +55,6 @@ public class S_ScoreManager : MonoBehaviour
     public void UpdateUi()
     {
         slider.value = finalScore;
+       // healthBar.fillAmount = Mathf.Clamp(finalScore, MinHapiness, MaxHapiness);
     }
 }

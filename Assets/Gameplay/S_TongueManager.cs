@@ -98,10 +98,15 @@ public class S_TongueManager : MonoBehaviour
 
     public void TongueReturned()
     {
-        TongueIsMoving = false;
-        Ev_TongueReturn?.Invoke();
         HideTongue();
+        Ev_TongueReturn?.Invoke();
+        Invoke("Retun",1.5f);
 
+    }
+
+    private void Retun()
+    {
+        TongueIsMoving = false;
     }
 
     public void HideTongue()
