@@ -52,8 +52,8 @@ public class Scr_FeedbacksManager : MonoBehaviour
         tweener.UiRotateLeftRight(panel,new Vector3(0,0,5),0.5f,LeanTweenType.easeInOutBack);
         tweener.UiSizeUpAndDown(panel, new Vector3(1.1f, 1.1f, 1.1f), 0.2f, LeanTweenType.easeInOutBack);
         tweener.UiChangeColor(panel.transform.GetChild(0).gameObject,Color.red, 0.1f,LeanTweenType.linear);
-        tweener.UiChangeColor(panel.transform.GetChild(1).gameObject,Color.red, 0.1f,LeanTweenType.linear);
-        tweener.UiChangeColor(panel.transform.GetChild(2).gameObject,Color.red, 0.1f,LeanTweenType.linear);
+      //  tweener.UiChangeColor(panel.transform.GetChild(1).gameObject,Color.red, 0.1f,LeanTweenType.linear);
+        //tweener.UiChangeColor(panel.transform.GetChild(2).gameObject,Color.red, 0.1f,LeanTweenType.linear);
     }
     
     

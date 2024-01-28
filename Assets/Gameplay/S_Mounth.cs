@@ -75,6 +75,8 @@ public class S_Mounth : MonoBehaviour
     else
     {
       bodyManager.animator.SetTrigger("FinishChew");
+      Invoke("RestetTongue",1.5f);
+
     }
     
     OnEvGainScore(score,tempScore.Count);
@@ -82,17 +84,20 @@ public class S_Mounth : MonoBehaviour
     print("Calculate score ");
 
   }
+  
 
   private void Reaction(bool isGood)
   {
     if (isGood)
     {
       bodyManager.animator.SetTrigger("GoodReaction");
+      Invoke("RestetTongue",2.6f);
 
     }
     else
     {
       bodyManager.animator.SetTrigger("BadReaction");
+      Invoke("RestetTongue",2.6f);
     }
   }
 
@@ -100,6 +105,10 @@ public class S_Mounth : MonoBehaviour
   {
     Ev_GainScore?.Invoke(score,multiplier);
   }
-  
+
+  private void RestetTongue()
+  {
+    FindObjectOfType<S_TongueManager>().Retun();
+  }
   
 }

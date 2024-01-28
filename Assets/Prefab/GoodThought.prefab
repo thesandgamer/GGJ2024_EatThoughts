@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: GainScore
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: spriteRender

@@ -10,16 +10,21 @@ public class S_ScoreManager : MonoBehaviour
 
     [SerializeField] private UnityEngine.UI.Slider slider;
     [SerializeField] private Image healthBar;
+    [SerializeField] private RectTransform bar;
 
     private float finalScore = 0;
 
     private float MaxHapiness = 50;
     private float MinHapiness = -50;
 
+    private S_Scoring scoring;
+
     private void Awake()
     {
         slider.maxValue = MaxHapiness;
         slider.minValue = MinHapiness;
+
+        scoring = FindObjectOfType<S_Scoring>();
         
         UpdateUi();
     }
@@ -54,7 +59,12 @@ public class S_ScoreManager : MonoBehaviour
 
     public void UpdateUi()
     {
+        if (scoring)
+        {
+            scoring.FinalScore = finalScore;
+        }
         slider.value = finalScore;
-       // healthBar.fillAmount = Mathf.Clamp(finalScore, MinHapiness, MaxHapiness);
+        LeanTween.size(bar, bar.sizeDelta+ new Vector2(10f,10f) , .5f).setEase(LeanTweenType.easeShake);
+        // healthBar.fillAmount = Mathf.Clamp(finalScore, MinHapiness, MaxHapiness);
     }
 }
