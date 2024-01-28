@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 963695110}
   - component: {fileID: 963695109}
   m_Layer: 7
-  m_Name: Target
+  m_Name: TongueTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1605,7 +1605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e1e6fa183a5541bc9673683d93f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tongue: {fileID: 963695105}
+  tongueTarget: {fileID: 963695105}
+  tongue: {fileID: 1946126407}
   tongueSpeed: 0.2
   tongueReturnSpeed: 2
 --- !u!136 &1233697640

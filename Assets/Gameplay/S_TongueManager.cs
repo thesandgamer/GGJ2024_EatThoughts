@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class S_TongueManager : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class S_TongueManager : MonoBehaviour
 
     private Plane plane = new Plane(Vector3.forward, 2);
 
-    [SerializeField] private GameObject tongue;
+   [SerializeField] private GameObject tongueTarget;
+   [SerializeField] private GameObject tongue;
 
     private bool TongueIsMoving = false;
+
+    private bool TongueIsOut = false;
     
     public static event Action  Ev_TongueReturn;
 
@@ -26,10 +30,13 @@ public class S_TongueManager : MonoBehaviour
 
     private void Awake()
     {
-        tongue.transform.position = transform.position;
+        tongueTarget.transform.position = transform.position;
         StartPoint = transform.position;
+        
+        HideTongue();
     }
 
+    
 
 
     public Vector3 GetPosInWorld()
@@ -54,17 +61,9 @@ public class S_TongueManager : MonoBehaviour
             if (!TongueIsMoving)
             {
                 TongueIsMoving = true;
-
                 LocTargetWorld = GetPosInWorld();
-                /*
-                ScreenLocTarget = Input.mousePosition;
-
-                Ray ray = Camera.main.ScreenPointToRay(ScreenLocTarget);
-
-                if (plane.Raycast(ray, out float distance))
-                {
-                    LocTargetWorld = ray.GetPoint(distance);
-                }*/
+  
+                ShowTongue();
 
                 MoveTongueToTarget();
             }
@@ -74,7 +73,7 @@ public class S_TongueManager : MonoBehaviour
     }
     public void MoveTongueToTarget()
     {
-        LeanTween.move(tongue, LocTargetWorld, tongueSpeed).setOnComplete(TongueReachTarget);
+        LeanTween.move(tongueTarget, LocTargetWorld, tongueSpeed).setOnComplete(TongueReachTarget);
         FindObjectOfType<S_Mounth>().CanEat = false;
 
 
@@ -82,7 +81,7 @@ public class S_TongueManager : MonoBehaviour
 
     public void ReturnTongue()
     {
-        LeanTween.move(tongue,StartPoint , tongueReturnSpeed).setOnComplete(TongueReturned);
+        LeanTween.move(tongueTarget,StartPoint , tongueReturnSpeed).setOnComplete(TongueReturned);
         FindObjectOfType<S_Mounth>().CanEat = true;
     }
     
@@ -96,12 +95,19 @@ public class S_TongueManager : MonoBehaviour
     {
         TongueIsMoving = false;
         Ev_TongueReturn?.Invoke();
+        HideTongue();
 
     }
 
     public void HideTongue()
     {
-        
+        tongue.SetActive(false);
+
+    }
+
+    public void ShowTongue()
+    {
+        tongue.SetActive(true);
     }
 
  
