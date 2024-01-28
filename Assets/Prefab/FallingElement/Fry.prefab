@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: GainScore
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1015949336317372568, guid: bc4e4489cb287d5478c12f6bfd63c9dd, type: 3}
+      propertyPath: SoundName
+      value: FryEat
+      objectReference: {fileID: 0}
     - target: {fileID: 2275852268274574783, guid: bc4e4489cb287d5478c12f6bfd63c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

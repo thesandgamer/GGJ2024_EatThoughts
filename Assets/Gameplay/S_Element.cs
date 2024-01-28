@@ -11,6 +11,8 @@ public class S_Element : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRender;
     [SerializeField] private List<Sprite> sprites;
 
+    [SerializeField] private string SoundName;
+
 
     public float GainScore = 0;
     
@@ -78,6 +80,10 @@ public class S_Element : MonoBehaviour
     {
         Destroy();
         transform.parent = null;
+        if (SoundName != null)
+        {
+            FindObjectOfType<Scr_AudioManager>().Play(SoundName);
+        }
         LeanTween.scale(this.gameObject, new Vector3(transform.localScale.x + 0.01f,transform.localScale.y +0.01f,transform.localScale.z +0.01f), 1f).setEase(LeanTweenType.punch).setOnComplete(Destroy);
 
     }

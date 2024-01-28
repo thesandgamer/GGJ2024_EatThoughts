@@ -91,12 +91,14 @@ public class S_Mounth : MonoBehaviour
     if (isGood)
     {
       bodyManager.animator.SetTrigger("GoodReaction");
+      FindObjectOfType<Scr_AudioManager>().Play("GoodChew");
       Invoke("RestetTongue",2.6f);
 
     }
     else
     {
       bodyManager.animator.SetTrigger("BadReaction");
+      FindObjectOfType<Scr_AudioManager>().Play("BadChew");
       Invoke("RestetTongue",2.6f);
     }
   }

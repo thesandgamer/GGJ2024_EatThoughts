@@ -13,6 +13,10 @@ PrefabInstance:
       value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
+      propertyPath: SoundName
+      value: Fart
+      objectReference: {fileID: 0}
+    - target: {fileID: 152367373902500409, guid: 41615ede2ce1a7e459a08f1334264780, type: 3}
       propertyPath: spriteRender
       value: 
       objectReference: {fileID: 3109595991115172647}
