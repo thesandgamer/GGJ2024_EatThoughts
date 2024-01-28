@@ -46,12 +46,14 @@ public class S_SceneManager : MonoBehaviour
 
     void LoadBadEnding()
     {
+        SceneManager.LoadSceneAsync("EndScene", LoadSceneMode.Additive);
         SceneManager.LoadSceneAsync("End_Bad", LoadSceneMode.Additive);
         FindObjectOfType<S_BodyManager>().MakeSadFace();
 
     }
     void LoadGoodEnding()
     {
+        SceneManager.LoadSceneAsync("EndScene", LoadSceneMode.Additive);
         SceneManager.LoadSceneAsync("End_Good", LoadSceneMode.Additive);
         FindObjectOfType<S_BodyManager>().MakeHappyFace();
 

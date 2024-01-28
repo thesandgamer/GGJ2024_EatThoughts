@@ -38,4 +38,9 @@ public class S_Manager_MainMenu : MonoBehaviour
     {
         Ev_MainMenuDisapear?.Invoke();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
